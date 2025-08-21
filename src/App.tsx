@@ -36,7 +36,7 @@ const App: React.FC = () => {
         setLoading(true);
         setError(null);
         const response = await axios.post<AuthResponse>(
-          'https://my-ad-app-backend.vercel.app/api',
+          'https://my-ad-app-backend.vercel.app/api/auth/telegram',
           { initData: initDataRaw }
         );
         setUser(response.data.user);
